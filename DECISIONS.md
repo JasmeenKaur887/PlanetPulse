@@ -12,3 +12,19 @@ If a user enters an obviously unrealistic value, such as a 500,000 km car journe
 
 
 PlanetPulse defines a week as Monday through Sunday, with the weekly target and progress resetting at the start of each Monday. The dashboard shows how much of the weekly target has already been used and how much remains for the rest of the week. I chose this structure because it is simple, familiar, and makes it easy for users to understand their progress from the beginning to the end of each week.
+
+It provides API endpoints such as:
+
+/api/health
+/api/factors
+/api/activities
+/api/target
+/api/stats
+/api/calculate
+/api/reset
+DELETE /api/activities/{id}
+YES — Standard API implemented.
+
+However, there is an important distinction: our current frontend (app.js) uses browser-side/localStorage logic rather than calling those API endpoints. So the API exists, but the deployed frontend and API are not currently integrated.
+
+If the hackathon's grading system expects the standard API itself to be publicly reachable, we will need to deploy the Python server as well rather than relying only on GitHub Pages.
